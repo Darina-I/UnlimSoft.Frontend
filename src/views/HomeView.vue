@@ -1,9 +1,47 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import { skills } from '@/mocks';
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+    <div class="w-1/3 flex flex-col m-auto gap-3 my-5">
+        <div class="text-2xl font-bold text-main">Исакова Дарина</div>
+        <div class="flex gap-1 flex-wrap">
+            <div class="bg-main text-white rounded-full py-0.5 px-2 text-sm"
+                v-for="(item, index) in skills">{{ item }}</div>
+        </div>
+        <div><span class="font-medium text-main">Образование:</span> Информационные системы и технологии (ТюмГу, бакалавр)</div>
+        <div>
+            <p class="font-medium text-main mb-2">Как начался мой путь в frontend-разработке?</p>
+            <div class="bg-slate-100 rounded-lg p-3 space-y-3">
+                <p>
+                    В школьные года участвовала в проектной смене образовательного фонда, 
+                    где мы занимались разработкой идей различных проектов. Именно тогда меня заитересовало: 
+                    как превратить идею и дизайн сайта в платформу, с которой может взаимодействовать пользователь.
+                </p>
+                <p>
+                    Тогда началось мое изучение it-сферы, первые шаги в программировании. После школы я поступила в ТюмГУ, 
+                    где интерес к frontend-разработке вырос, и я продолжала изучать эту область. 
+                </p>
+                <p>
+                    На 3-м курсе прошла первую стажировку, 
+                    а после устроилась в компанию "ЭНКО". Там я занималась не только разработкой, но и дизайном нашего проекта.
+                </p>
+            </div>
+        </div>
+        <div>
+            <p class="font-medium text-main mb-2">Немного о себе</p>
+            <div class="bg-slate-100 rounded-lg p-3 space-y-3">
+                <p>
+                   Хобби: творчество, волейбол, чтение, настольные игры
+                </p>
+                <p>
+                    <span class="font-medium text-main">Навыки коммуникации и работы в команде</span>. Огранизация мероприятий с "Мосигра" - вела игровые сессии, работала с разными группами людей.
+                </p>
+                <p>
+                    <span class="font-medium text-main">Ответственность и тайм-менеджмент</span>. В 2022 года отработала две смены в лагере, как вожатый. Помогала организовать мероприятия для детей, 
+                    вела документацию, следила за расписанием. 
+                </p>
+            </div>
+        </div>
+    </div>
 </template>
